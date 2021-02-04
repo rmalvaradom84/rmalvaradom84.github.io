@@ -5,9 +5,9 @@ navbar:
  left:
   - text: "Inicio"
     href: index.html
-  - text: "About"
+  - text: "Acerca"
     href: about.html
 output:
   html_document:
-    lib_dir: site_libs
-    self_contained: no
+    theme: united
+    highlight: textmate

@@ -1,5 +1,17 @@
 ---
-title: "My Website"
+title: "Habits"
 ---
 
-Hello, Website!
+##Hola a todos, Notas de clase!
+
+## Quarterly Results {.tabset}
+
+### By Product
+
+(tab content)
+
+### By Region
+
+(tab content)
+
+## Quarterly Results {.tabset .tabset-fade .tabset-pills}
