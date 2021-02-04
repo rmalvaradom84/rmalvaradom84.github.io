@@ -8,7 +8,12 @@ title: "Habits"
 
 ### By Product
 
-(tab content)
+```{r}
+DT::datatable(
+  head(iris, 10),
+  fillContainer = FALSE, options = list(pageLength = 8)
+)
+```
 
 ### By Region
 
