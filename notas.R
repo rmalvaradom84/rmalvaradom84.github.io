@@ -1,4 +1,5 @@
-#rmarkdown::render_site(encoding = "UTF-8")
+#
+
 #pagina web con r
 #tutorial https://www.youtube.com/watch?v=JxsreeFsu8g
 #https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html
