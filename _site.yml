@@ -1,9 +1,13 @@
-name: "my-website"
+name: "iRoger"
 output_dir: "."
 navbar:
- title: "My Website"
+ title: "iRoger"
  left:
-  - text: "Home"
+  - text: "Inicio"
     href: index.html
   - text: "About"
     href: about.html
+output:
+  html_document:
+    lib_dir: site_libs
+    self_contained: no
