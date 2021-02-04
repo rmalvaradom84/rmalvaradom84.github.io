@@ -1,6 +1,5 @@
 ---
 title: "Habits"
-runtime: shiny
 ---
 
 ## Hola a todos, Notas de clase!
@@ -18,18 +17,24 @@ DT::datatable(
 
 ### By Region
 
-```{r eruptions, echo=FALSE}
-
-selectInput('breaks', label = 'Number of bins:',choices = c(10, 20, 35, 50), selected= 20)
-
-renderPlot({
-  par(mar = c(4, 4, .1, .5))
-  hist(
-    faithful$eruptions, as.numeric(input$breaks),
-    col = 'gray', border = 'white',
-    xlab = 'Duration (minutes)', main = ''
-  )
-})
+```{r}
+shinyApp(
+  ui = fillPage(
+    fillCol(flex = c(NA, 1), 
+      inputPanel(
+        selectInput("region", "Region:", choices = colnames(WorldPhones))
+      ),
+      plotOutput("phonePlot", height = "100%")
+    )
+  ),
+  server = function(input, output) {
+    output$phonePlot <- renderPlot({
+      barplot(WorldPhones[,input$region]*1000, 
+              ylab = "Number of Telephones", xlab = "Year")
+    })
+  },
+  options = list(height = 600)
+)
 ```
 
 ## Quarterly Results {.tabset .tabset-fade .tabset-pills}
